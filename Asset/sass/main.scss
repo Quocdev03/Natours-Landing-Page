@@ -2,13 +2,16 @@
 @import "./abstracts/mixins";
 @import "./abstracts/functions";
 
-@import "./base/reset.scss";
+@import "./base/reset";
 @import "./base/base";
 @import "./base/animation";
 @import "./base/typography";
 @import "./base/utilities";
 
 @import "./components/button";
+@import "./components/composition";
+@import "./components/features";
+@import "./components/card";
 
 @import "./layout/header";
 @import "./layout/grid";

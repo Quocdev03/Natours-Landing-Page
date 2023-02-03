@@ -1,6 +1,5 @@
 .row {
    max-width: $grid-width;
-   background-color: #eee;
    margin-left: auto;
    margin-right: auto;
 
@@ -11,7 +10,6 @@
    @include clearfix;
 
    [class^="col-"] {
-      background-color: orangered;
       float: left;
 
       &:not(:last-child) {
@@ -43,5 +41,3 @@
       width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
    }
 }
-
-// Part 2 006
