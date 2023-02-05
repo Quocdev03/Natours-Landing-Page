@@ -5,14 +5,42 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet">
    <link rel="stylesheet" href="./Asset/css/icon-font.css">
    <link rel="stylesheet" href="./Asset/css/main.css">
+   <link rel="icon" href="./Asset/images/favicon.png" type="image/x-icon" />
    <title>Natours | Exciting tours for adventurous people</title>
 </head>
 
 <body>
    <div class="wrapper">
+      <div class="navigation">
+         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+         <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+         </label>
+
+         <div class="navigation__background">&nbsp;</div>
+
+         <nav class="navigation__nav">
+            <ul class="navigation__list">
+               <li class="navigation__item"><a href="#"
+                     class="navigation__link"><span>01</span>About Natous</a></li>
+               <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your
+                     benfits</a></li>
+               <li class="navigation__item"><a href="#"
+                     class="navigation__link"><span>03</span>Popular tours</a></li>
+               <li class="navigation__item"><a href="#"
+                     class="navigation__link"><span>04</span>Stories</a></li>
+               <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book
+                     now</a></li>
+            </ul>
+         </nav>
+      </div>
       <header class="header">
          <div class="header__logo">
             <img src="./Asset/images/logo-white.png" alt="header-logo">
@@ -22,7 +50,7 @@
                <h1 class="heading-primary--main">Outdoors</h1>
                <span class="heading-primary--sub">is where life happens</span>
             </div>
-            <a href="#!" class="btn btn--white btn--animated">
+            <a href="#section-tours" class="btn btn--white btn--animated">
                Discover our tours
             </a>
          </div>
@@ -57,12 +85,21 @@
                </div>
                <div class="col-1-of-2">
                   <div class="composition">
-                     <img src="./Asset/images/nat-1.jpg" alt="Photo 1"
-                        class="composition__photo composition__photo--p1">
-                     <img src="./Asset/images/nat-2.jpg" alt="Photo 2"
-                        class="composition__photo composition__photo--p2">
-                     <img src="./Asset/images/nat-3.jpg" alt="Photo 3"
-                        class="composition__photo composition__photo--p3">
+                     <img
+                        srcset="./Asset/images/nat-1.jpg 300w, ./Asset/images/nat-1-large.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw,(max-width: 37.5em) 30vw, 300px"
+                        alt="Photo 1" class="composition__photo composition__photo--p1"
+                        src="./Asset/images/nat-1.jpg">
+                     <img
+                        srcset="./Asset/images/nat-2.jpg 300w, ./Asset/images/nat-2-large.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw,(max-width: 37.5em) 30vw, 300px"
+                        alt="Photo 2" class="composition__photo composition__photo--p2"
+                        src="./Asset/images/nat-2.jpg">
+                     <img
+                        srcset="./Asset/images/nat-3.jpg 300w, ./Asset/images/nat-3-large.jpg 1000w"
+                        sizes="(max-width: 56.25em) 20vw,(max-width: 37.5em) 30vw, 300px"
+                        alt="Photo 3" class="composition__photo composition__photo--p3"
+                        src="./Asset/images/nat-3.jpg">
                   </div>
                </div>
             </div>
@@ -111,7 +148,7 @@
                </div>
             </div>
          </section>
-         <section class="section-tours">
+         <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                <h2 class="heading-secondary">
                   Most popular tours
@@ -288,21 +325,45 @@
             <div class="row">
                <div class="book">
                   <div class="book__form">
-                     <form action="#!" class="form">
-                        <div class="u-center-text u-margin-bottom-big">
+                     <form action="#" class="form">
+                        <div class="u-margin-bottom-medium">
                            <h2 class="heading-secondary">
                               Start booking now
                            </h2>
                         </div>
+
                         <div class="form__group">
-                           <input type="text" class="form__input" id="name" placeholder="Full Name"
+                           <input type="text" class="form__input" placeholder="Full name" id="name"
                               required>
-                           <label for="name" class="form__label">Full Name</label>
+                           <label for="name" class="form__label">Full name</label>
                         </div>
+
                         <div class="form__group">
-                           <input type="email" class="form__input" id="email"
-                              placeholder="Email Address" required>
-                           <label for="email" class="form__label">Email Address</label>
+                           <input type="email" class="form__input" placeholder="Email address"
+                              id="email" required>
+                           <label for="email" class="form__label">Email address</label>
+                        </div>
+
+                        <div class="form__group u-margin-bottom-medium">
+                           <div class="form__radio-group">
+                              <input type="radio" class="form__radio-input" id="small" name="size">
+                              <label for="small" class="form__radio-label">
+                                 <span class="form__radio-button"></span>
+                                 Small tour group
+                              </label>
+                           </div>
+
+                           <div class="form__radio-group">
+                              <input type="radio" class="form__radio-input" id="large" name="size">
+                              <label for="large" class="form__radio-label">
+                                 <span class="form__radio-button"></span>
+                                 Large tour group
+                              </label>
+                           </div>
+                        </div>
+
+                        <div class="form__group">
+                           <button class="btn btn--green">Next step &rarr;</button>
                         </div>
                      </form>
                   </div>
@@ -310,6 +371,82 @@
             </div>
          </section>
       </main>
+      <footer class="footer">
+         <picture class="footer__logo-box">
+            <source media="(max-width: 37.5em )"
+               srcset="./Asset/images/logo-green-small-1x.png 1x, ./Asset/images/logo-green-small-2x.png 2x">
+            <img srcset="./Asset/images/logo-green-1x.png 1x, ./Asset/images/logo-green-2x.png 2x"
+               alt="" class="footer__logo" srcset="./Asset/images/logo-green-2x.png">
+         </picture>
+         <div class="row">
+            <div class="col-1-of-2">
+               <div class="footer__navigation">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <a href="" class="footer__link">Company</a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="" class="footer__link">Contact</a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="" class="footer__link">Carrers</a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="" class="footer__link">Privacy Policy</a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="" class="footer__link">Terms</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-1-of-2">
+               <p class="footer__copyright">
+                  Built my
+                  <a href="#!" class="footer__link">
+                     Jonas Schmedtmann
+                  </a>
+                  for his online course <a href="#!" class="footer__link">Advanced Css and
+                     Sass</a>.
+                  Copyright &copy; by Cao Chi Quoc. you are 100% allowed to use this webpage for
+                  both personal and commercial use, but NOT to claim it as your own design. A
+                  credit
+                  to the original author, Cao Chi Quoc, is of course highly appreciated!
+               </p>
+            </div>
+         </div>
+      </footer>
+      <div class="popup" id="popup">
+         <div class="popup__content">
+            <div class="popup__left">
+               <img src="./Asset/images/nat-8.jpg" alt="Tour photo" class="popup__img">
+               <img src="./Asset/images/nat-9.jpg" alt="Tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+               <a href="#section-tours" class="popup__close">&times;</a>
+               <h2 class="popup__heading heading-secondary u-margin-bottom-small">
+                  Start booking now
+               </h2>
+               <h3 class="heading-tertiary u-margin-bottom-small">
+                  Important &ndash; Please read these terms before booking
+               </h3>
+               <p class="popup__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odio commodi
+                  magnam animi natus facere voluptatem libero dolorum id maiores autem repellat
+                  velit accusantium esse aliquam, ut culpa blanditiis sint? Lorem ipsum dolor, sit
+                  amet consectetur adipisicing elit. Voluptatibus, vero! Commodi nisi quod voluptas
+                  sapiente neque repudiandae soluta excepturi minima ipsam saepe nemo pariatur,
+                  architecto ab harum impedit a facere?. Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Nam velit cupiditate exercitationem repellendus veniam quis
+                  quisquam eaque earum. Magnam libero quam autem nihil eveniet? Molestias, beatae
+                  magni? Quia, veniam iste?
+               </p>
+               <a href="#!" class="btn btn--green popup__button">
+                  Book now
+               </a>
+            </div>
+         </div>
+      </div>
    </div>
 </body>
 
