@@ -36,7 +36,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
    @if $breakpoint ==small-phone {
       @media only screen and (max-width: 23.4375em) {
          @content;
-         transition: all 0.2s linear;
+         transition: all .2s;
       }
 
       ; // < 375px
@@ -45,7 +45,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
    @if $breakpoint ==phone {
       @media only screen and (max-width: 37.5em) {
          @content;
-         transition: all 0.2s linear;
+         transition: all .2s;
       }
 
       ; // < 600px
@@ -54,7 +54,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
    @if $breakpoint ==tab-port {
       @media only screen and (max-width: 56.25em) {
          @content;
-         transition: all 0.2s linear;
+         transition: all .2s;
       }
 
       ; // < 900px
@@ -63,7 +63,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
    @if $breakpoint ==tab-land {
       @media only screen and (max-width: 75em) {
          @content;
-         transition: all 0.2s linear;
+         transition: all .2s;
       }
 
       ; // < 1200px
@@ -80,7 +80,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
    @if $breakpoint ==big-desktop {
       @media only screen and (min-width: 112.5em) {
          @content;
-         transition: all 0.2s linear;
       }
 
       ; // > 1800px

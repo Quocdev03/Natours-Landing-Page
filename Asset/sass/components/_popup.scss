@@ -18,6 +18,10 @@
 
    &__heading {
       @include respond(tab-port) {
+         width: 30rem;
+      }
+
+      @include respond(phone) {
          width: 18rem;
       }
    }
@@ -32,11 +36,11 @@
       overflow: hidden;
       opacity: 0;
       transform: translate(-50%, -50%) scale(.25);
-      transition: all .5s .1s ease-in;
+      transition: all .4s .2s;
 
       @include respond(tab-land) {
          width: 90%;
-         transition: all .5s .1s ease-in;
+         transition: all .4s .2s;
       }
    }
 
@@ -45,7 +49,7 @@
       display: table-cell;
 
       @include respond(phone) {
-         width: 30%;
+         width: 35%;
       }
    }
 
@@ -56,11 +60,11 @@
       padding: 3rem 5rem;
 
       @include respond(tab-port) {
-         padding: 3rem 3rem;
+         padding: 3rem;
       }
 
       @include respond(phone) {
-         padding: 2rem 1.2rem;
+         padding: 2rem;
       }
    }
 
