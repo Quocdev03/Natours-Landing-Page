@@ -24,6 +24,7 @@
 
    &__content {
       @include absCenter;
+      width: 80%;
       border-radius: 6px;
       background-color: $color-white;
       box-shadow: 0 2rem 4rem rgba($color-black, .2);
@@ -31,14 +32,11 @@
       overflow: hidden;
       opacity: 0;
       transform: translate(-50%, -50%) scale(.25);
-      transition: all .4s .2s;
-
-      @include respond(medium-desktop) {
-         width: 80%;
-      }
+      transition: all .5s .1s ease-in;
 
       @include respond(tab-land) {
          width: 90%;
+         transition: all .5s .1s ease-in;
       }
    }
 
