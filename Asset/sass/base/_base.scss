@@ -31,6 +31,11 @@ html {
       font-size: 43.75%; // 1rem = 7px, 7px/16px = 43.75%
    }
 
+   // width < 320px
+   @include respond(extra-small-phone) {
+      font-size: 37.5%; // 1rem = 6px, 6px/16px = 37.5%
+   }
+
    // width > 1200px
    @include respond(big-desktop) {
       font-size: 75%; // 1rem = 12px, 12px/16px = 75%
@@ -58,6 +63,17 @@ body {
    &::-webkit-scrollbar-thumb {
       border-radius: 4px;
       background-color: $color-primary;
+   }
+
+   @include respond(phone) {
+      & {
+         -ms-overflow-style: none;
+         scrollbar-width: none;
+      }
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
    }
 }
 

@@ -33,6 +33,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
+
+   @if $breakpoint ==extra-small-phone {
+      @media only screen and (max-width: 20em) {
+         @content;
+         transition: all .2s;
+      }
+
+      ; // < 320px
+   }
+
    @if $breakpoint ==small-phone {
       @media only screen and (max-width: 23.4375em) {
          @content;
@@ -75,6 +85,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
       }
 
       ; // > 1040px
+   }
+
+   @if $breakpoint ==large-desktop {
+      @media only screen and (min-width: 75em) {
+         @content;
+      }
+
+      ; // > 1200px
    }
 
    @if $breakpoint ==big-desktop {

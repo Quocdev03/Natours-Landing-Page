@@ -42,6 +42,16 @@
          width: 90%;
          transition: all .4s .2s;
       }
+
+      @include respond(medium-desktop) {
+         height: 50%;
+         transition: all .4s;
+      }
+
+      @include respond(large-desktop) {
+         height: 70%;
+         transition: all .4s;
+      }
    }
 
    &__left {
@@ -49,7 +59,7 @@
       display: table-cell;
 
       @include respond(phone) {
-         width: 35%;
+         width: 40%;
       }
    }
 
@@ -60,11 +70,11 @@
       padding: 3rem 5rem;
 
       @include respond(tab-port) {
-         padding: 3rem;
+         padding: 2rem;
       }
 
       @include respond(phone) {
-         padding: 2rem;
+         padding: 1rem;
       }
    }
 
@@ -93,7 +103,7 @@
       }
 
       @include respond(tab-land) {
-         height: 15rem;
+         height: 12rem;
          overflow-y: scroll;
          margin-bottom: 5rem;
 
@@ -109,6 +119,10 @@
 
       @include respond(tab-port) {
          margin-bottom: 2rem;
+      }
+
+      @include respond(small-phone) {
+         height: 8rem;
       }
    }
 
